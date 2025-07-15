@@ -106,21 +106,22 @@ const Hero = () => {
               style={{ animationDelay: "0.1s" }}
             >
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">01</span>
-              <span>Purpose</span>
+              <span>$BDAO</span>
+              <span className="ml-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">LIVE</span>
             </div>
             
             <h1 
               className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" 
               style={{ animationDelay: "0.3s" }}
             >
-              Bharat Dao: Building<br className="hidden sm:inline" />India's Web3 Future
+              Bharat Dao: Building<br className="hidden sm:inline" />India's <span className="text-pulse-500">10,000x</span> Future
             </h1>
             
             <p 
               style={{ animationDelay: "0.5s" }} 
               className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg text-left"
             >
-              A gateway for 1000+ Global Blockchains to enter and scale in India through Mass Adoption, Education & Infrastructure.
+              A gateway for 1000+ Global Blockchains to enter and scale in India through Mass Adoption, Education & Infrastructure. <span className="font-bold">Join now or watch from the sidelines.</span>
             </p>
             
             <div 
@@ -128,7 +129,9 @@ const Hero = () => {
               style={{ animationDelay: "0.7s" }}
             >
               <a 
-                href="#get-access" 
+                href="https://pump.fun/advanced/coin/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center group w-full sm:w-auto text-center" 
                 style={{
                   backgroundColor: '#FE5C02',
@@ -136,14 +139,21 @@ const Hero = () => {
                   boxSizing: 'border-box',
                   color: '#FFFFFF',
                   cursor: 'pointer',
-                  fontSize: '14px',
+                  fontSize: '16px',
+                  fontWeight: '600',
                   lineHeight: '20px',
-                  padding: '16px 24px', // Slightly reduced padding for mobile
+                  padding: '16px 28px',
                   border: '1px solid white',
                 }}
               >
-                Request Access
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                BUY $BDAO NOW
+                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a 
+                href="#token" 
+                className="flex items-center justify-center w-full sm:w-auto text-center border border-gray-300 hover:border-pulse-500 text-gray-800 hover:text-pulse-500 font-medium py-3 px-6 rounded-full transition-all duration-300"
+              >
+                View Token Metrics
               </a>
             </div>
           </div>

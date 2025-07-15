@@ -74,6 +74,8 @@ const Navbar = () => {
             Home
           </a>
           <a href="#features" className="nav-link">About</a>
+          <a href="#token" className="nav-link">$BDAO Token</a>
+          <a href="#careers" className="nav-link">Careers</a>
           <a href="#details" className="nav-link">Contact</a>
         </nav>
 
@@ -114,6 +116,26 @@ const Navbar = () => {
             }}
           >
             About
+          </a>
+          <a 
+            href="#token" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            $BDAO Token
+          </a>
+          <a 
+            href="#careers" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            Careers
           </a>
           <a 
             href="#details" 

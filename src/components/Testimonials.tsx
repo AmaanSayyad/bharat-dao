@@ -10,7 +10,7 @@ interface TestimonialProps {
 }
 
 const testimonials: TestimonialProps[] = [{
-  content: "Bharat Dao has connected me with global blockchain projects I never knew existed. As a developer from a tier-2 city, these opportunities were previously inaccessible to me.",
+  content: "Bharat Dao has connected me with global blockchain projects I never knew existed. As a developer from a tier-3 city, these opportunities were previously inaccessible to me.",
   author: "Rahul Sharma",
   role: "Blockchain Developer, Pune",
   gradient: "from-blue-700 via-indigo-800 to-purple-900",
