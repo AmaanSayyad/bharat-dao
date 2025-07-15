@@ -63,7 +63,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Pulse Robot
+				// Custom colors for Bharat Dao ($BDAO)
 				pulse: {
 					"50": "#fff7ed",
 					"100": "#ffedd5",

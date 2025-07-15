@@ -10,20 +10,19 @@ const HumanIntuitionSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-left">
             <div className="pulse-chip mb-4">
-              <span>Human-Like Intuition</span>
+              <span>Community-Driven</span>
             </div>
-            <h2 className="section-title mb-6">Beyond algorithms to true understanding</h2>
+            <h2 className="section-title mb-6">Powered by people, not products</h2>
             <p className="text-lg text-gray-700 mb-6">
-              Atlas goes beyond programmed responses to develop contextual awareness and
-              adaptive learning patterns that mirror human intuition. This enables natural
-              interactions that feel like working with a human colleague rather than a machine.
+              Bharat DAO is driven by people - not products. Our grassroots-first approach brings together diverse talents from across India and the world to create a vibrant Web3 ecosystem.
             </p>
             <ul className="space-y-4">
               {[
-                "Learns from human demonstrations and refines its approach over time",
-                "Anticipates needs based on situational awareness and past interactions",
-                "Adapts to changing environments without explicit reprogramming",
-                "Makes decisions with nuanced understanding of human preferences"
+                "WorldWide Builders developing innovative blockchain solutions",
+                "Educators spreading Web3 knowledge in multiple languages",
+                "Content Creators amplifying the Web3 message across platforms",
+                "Regional Ambassadors representing communities across India",
+                "Growth Hackers expanding our reach and impact"
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <div className="mr-3 text-pulse-500">

@@ -55,7 +55,7 @@ const Navbar = () => {
           aria-label="Bharat Dao ($BDAO)"
         >
           <img 
-            src="/logo.svg" 
+            src="/logo.png" 
             alt="Bharat Dao ($BDAO) Logo" 
             className="h-7 sm:h-8" 
           />

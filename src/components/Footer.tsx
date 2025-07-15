@@ -1,18 +1,29 @@
 
 import React from "react";
 const Footer = () => {
-  return <footer className="w-full bg-white py-0">
+  const currentYear = new Date().getFullYear();
+  
+  return <footer className="w-full bg-white py-6">
       <div className="section-container">
-        <p className="text-center text-gray-600 text-sm">
-          This template takes inspiration from{" "}
-          <a href="https://x.com/BrettFromDJ" target="_blank" rel="noopener noreferrer" className="text-pulse-500 hover:underline">
-            DesignJoy's
-          </a>{" "}
-          BUILD WARS design, built entirely with Lovable by{" "}
-          <a href="https://x.com/rezaul_arif" target="_blank" rel="noopener noreferrer" className="text-pulse-500 hover:underline">
-            Rezaul Arif
-          </a>
-        </p>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div>
+            <p className="text-gray-600 text-sm">
+              © {currentYear} Bharat DAO ($BDAO). All rights reserved.
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <p className="text-gray-600 text-sm">
+              Founders: {" "}
+              <a href="https://x.com/amaanbiz" target="_blank" rel="noopener noreferrer" className="text-pulse-500 hover:underline">
+                Amaan
+              </a>{" "}
+              & {" "}
+              <a href="https://x.com/trivikram214" target="_blank" rel="noopener noreferrer" className="text-pulse-500 hover:underline">
+                Trivikram
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </footer>;
 };
