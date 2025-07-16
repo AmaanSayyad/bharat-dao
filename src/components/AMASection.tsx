@@ -25,14 +25,14 @@ const AMASection: React.FC = () => {
       date: "6th July",
       time: "10 PM IST",
       speakers: [
-        {name: "Tony (The White Baba)", handle: "@TonyCatoff"},
+        {name: "Tony", handle: "@TonyCatoff"},
         {name: "Fardeen Khan", handle: "@thelastknown_"},
         {name: "Trivikram", handle: "@trivikram214"},
       ],
       host: {name: "Bhumi Mishra", handle: "@bhumi_125"},
       link: "https://x.com/i/spaces/1ZkKzYmqVANxv/peek",
       twitterLink: "https://x.com/bharat_dao_/status/1941211138643181760",
-      bannerImage: "/lovable-uploads/22d31f51-c174-40a7-bd95-00e4ad00eaf3.png"
+      bannerImage: "/AMA1.jpeg"
     },
     {
       title: "Bharat DAO Ambassador Program",
@@ -42,12 +42,12 @@ const AMASection: React.FC = () => {
       speakers: [
         {name: "Shagun Oberoi", handle: "@shagunoberoi_"},
         {name: "Shivangi Singh", handle: "@kaafi_shivangi"},
+        {name: "Alok", handle: "@alok_inj"},
       ],
       host: {name: "Bhumi Mishra", handle: "@bhumi_125"},
-      coHost: {name: "Alok", handle: "@alok_inj"},
       link: "https://x.com/i/spaces/1DXxyqRAmMbxM",
-      twitterLink: "https://x.com/bharat_dao_/status/1942984759044640777",
-      bannerImage: "/lovable-uploads/5663820f-6c97-4492-9210-9eaa1a8dc415.png"
+      twitterLink: "https://x.com/bharat_dao_/status/1942741493741150685",
+      bannerImage: "/AMA2.jpeg"
     },
     {
       title: "TOO ICONIC TO IGNORE 🔥",
@@ -55,15 +55,15 @@ const AMASection: React.FC = () => {
       date: "17th July",
       time: "10 PM IST",
       speakers: [
-        {name: "Daavya Vaishnav", handle: "@Daavya_vaishnav"},
+        {name: "Daavya", handle: "@Daavya_vaishnav"},
         {name: "Medusa", handle: "@MedusaOnchain"},
-        {name: "Jaynti Kanani", handle: "@jdkanani"},
+        {name: "Victorya", handle: "@Justvictorya"},
+        {name: "Ifee", handle: "@Ifee_lovee"},
       ],
       host: {name: "Bhumi Mishra", handle: "@bhumi_125"},
-      coHost: {name: "XX", handle: "@XX"},
       link: "https://x.com/i/spaces/1jMJgkLzWdgJL",
       twitterLink: "https://x.com/bharat_dao_/status/1945497313599697138",
-      bannerImage: "/lovable-uploads/dc13e94f-beeb-4671-8a22-0968498cdb4c.png"
+      bannerImage: "/AMA3.jpeg"
     }
   ];
 
@@ -113,11 +113,21 @@ const AMASection: React.FC = () => {
                     <Twitter size={14} />
                     <span>TWITTER SPACE</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-500 text-sm">
-                    <Calendar size={14} className="text-pulse-500" />
-                    <span>{event.date}</span>
-                    <Clock size={14} className="text-pulse-500 ml-2" />
-                    <span>{event.time}</span>
+                </div>
+                
+                {/* Date and Time - Enhanced Styling */}
+                <div className="bg-gradient-to-r from-pulse-50 to-gray-50 p-3 rounded-lg mb-4 flex items-center justify-between">
+                  <div className="flex items-center">
+                    <Calendar size={18} className="text-pulse-600 mr-2" />
+                    <div>
+                      <span className="text-gray-700 font-semibold">{event.date}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <Clock size={18} className="text-pulse-600 mr-2" />
+                    <div>
+                      <span className="text-gray-700 font-semibold">{event.time}</span>
+                    </div>
                   </div>
                 </div>
                 
