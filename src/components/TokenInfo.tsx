@@ -1,50 +1,8 @@
-import React, { useRef, useState, useEffect } from "react";
-import { ArrowRight } from "lucide-react";
+import React, { useRef } from "react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 const TokenInfo = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [timeLeft, setTimeLeft] = useState({
-    days: 2,
-    hours: 8,
-    minutes: 45,
-    seconds: 30
-  });
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        let { days, hours, minutes, seconds } = prev;
-        
-        seconds--;
-        if (seconds < 0) {
-          seconds = 59;
-          minutes--;
-          
-          if (minutes < 0) {
-            minutes = 59;
-            hours--;
-            
-            if (hours < 0) {
-              hours = 23;
-              days--;
-              
-              if (days < 0) {
-                days = 0;
-                hours = 0;
-                minutes = 0;
-                seconds = 0;
-                clearInterval(timer);
-              }
-            }
-          }
-        }
-        
-        return { days, hours, minutes, seconds };
-      });
-    }, 1000);
-    
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <section className="py-16 bg-gray-50 relative" id="token" ref={sectionRef}>
@@ -69,25 +27,37 @@ const TokenInfo = () => {
             </p>
             
             <div className="bg-gradient-to-r from-pulse-600 to-pulse-700 p-6 rounded-xl mb-8 text-white">
-              <h3 className="text-xl font-bold mb-3">Limited Time Opportunity</h3>
-              <p className="mb-4">Early bird bonuses end in:</p>
-              <div className="grid grid-cols-4 gap-2 text-center">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                  <div className="text-2xl font-bold">{timeLeft.days}</div>
-                  <div className="text-xs">Days</div>
-                </div>
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                  <div className="text-2xl font-bold">{timeLeft.hours}</div>
-                  <div className="text-xs">Hours</div>
-                </div>
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                  <div className="text-2xl font-bold">{timeLeft.minutes}</div>
-                  <div className="text-xs">Minutes</div>
-                </div>
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                  <div className="text-2xl font-bold">{timeLeft.seconds}</div>
-                  <div className="text-xs">Seconds</div>
-                </div>
+              <h3 className="text-xl font-bold mb-3">$BDAO Is Now Live!</h3>
+              <p className="mb-4">Available on:</p>
+              <div className="grid grid-cols-2 gap-4">
+                <a 
+                  href="https://pump.fun/advanced/coin/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center hover:bg-white/30 transition-colors group"
+                >
+                  <div className="text-center">
+                    <div className="text-xl font-bold mb-1">pump.fun</div>
+                    <div className="text-xs flex items-center justify-center">
+                      Trade Now
+                      <ExternalLink className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </div>
+                  </div>
+                </a>
+                <a 
+                  href="https://dexscreener.com/solana/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center hover:bg-white/30 transition-colors group"
+                >
+                  <div className="text-center">
+                    <div className="text-xl font-bold mb-1">dexscreener</div>
+                    <div className="text-xs flex items-center justify-center">
+                      View Chart
+                      <ExternalLink className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
             

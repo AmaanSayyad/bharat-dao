@@ -12,6 +12,8 @@ import Newsletter from "@/components/Newsletter";
 import MadeByHumans from "@/components/MadeByHumans";
 import HiringSection from "@/components/HiringSection";
 import TokenInfo from "@/components/TokenInfo";
+import AMASection from "@/components/AMASection";
+import TokenListings from "@/components/TokenListings";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -71,7 +73,9 @@ const Index = () => {
         <ImageShowcaseSection />
         <Features />
         <TokenInfo />
+        <TokenListings />
         <HiringSection />
+        <AMASection />
         <Testimonials />
         <Newsletter />
         <MadeByHumans />

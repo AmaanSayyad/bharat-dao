@@ -76,6 +76,7 @@ const Navbar = () => {
           <a href="#features" className="nav-link">About</a>
           <a href="#token" className="nav-link">$BDAO Token</a>
           <a href="#careers" className="nav-link">Careers</a>
+          <a href="#ama" className="nav-link">AMAs</a>
           <a href="#details" className="nav-link">Contact</a>
         </nav>
 
@@ -136,6 +137,16 @@ const Navbar = () => {
             }}
           >
             Careers
+          </a>
+          <a 
+            href="#ama" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            AMAs
           </a>
           <a 
             href="#details" 
