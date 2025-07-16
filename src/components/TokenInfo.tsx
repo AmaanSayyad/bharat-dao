@@ -29,15 +29,15 @@ const TokenInfo = () => {
             <div className="bg-gradient-to-r from-pulse-600 to-pulse-700 p-6 rounded-xl mb-8 text-white">
               <h3 className="text-xl font-bold mb-3">$BDAO Is Now Live!</h3>
               <p className="mb-4">Available on:</p>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <a 
                   href="https://pump.fun/advanced/coin/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center hover:bg-white/30 transition-colors group"
+                  className="bg-white/20 backdrop-blur-sm rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-colors group"
                 >
                   <div className="text-center">
-                    <div className="text-xl font-bold mb-1">pump.fun</div>
+                    <div className="text-lg font-bold mb-1">pump.fun</div>
                     <div className="text-xs flex items-center justify-center">
                       Trade Now
                       <ExternalLink className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-0.5" />
@@ -48,12 +48,54 @@ const TokenInfo = () => {
                   href="https://dexscreener.com/solana/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center hover:bg-white/30 transition-colors group"
+                  className="bg-white/20 backdrop-blur-sm rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-colors group"
                 >
                   <div className="text-center">
-                    <div className="text-xl font-bold mb-1">dexscreener</div>
+                    <div className="text-lg font-bold mb-1">Dexscreener</div>
                     <div className="text-xs flex items-center justify-center">
                       View Chart
+                      <ExternalLink className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </div>
+                  </div>
+                </a>
+                <a 
+                  href="https://www.dextools.io/app/en/solana/pair-explorer/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump?t=1752696067932" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/20 backdrop-blur-sm rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-colors group"
+                >
+                  <div className="text-center">
+                    <div className="text-lg font-bold mb-1">DEXTools</div>
+                    <div className="text-xs flex items-center justify-center">
+                      View Pair
+                      <ExternalLink className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </div>
+                  </div>
+                </a>
+                <a 
+                  href="https://birdeye.so/token/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump?chain=solana" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/20 backdrop-blur-sm rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-colors group"
+                >
+                  <div className="text-center">
+                    <div className="text-lg font-bold mb-1">Birdeye</div>
+                    <div className="text-xs flex items-center justify-center">
+                      Track Token
+                      <ExternalLink className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </div>
+                  </div>
+                </a>
+                <a 
+                  href="https://jup.ag/tokens/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/20 backdrop-blur-sm rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-colors group"
+                >
+                  <div className="text-center">
+                    <div className="text-lg font-bold mb-1">Jupiter</div>
+                    <div className="text-xs flex items-center justify-center">
+                      Swap Now
                       <ExternalLink className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </div>
                   </div>
@@ -123,9 +165,9 @@ const TokenInfo = () => {
                     <span className="text-gray-600">Launch Type:</span>
                     <span className="font-medium">Bonding Curve</span>
                   </li>
-                  <li className="flex justify-between">
-                    <span className="text-gray-600">Contract Address:</span>
-                    <span className="font-medium text-sm">D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump</span>
+                  <li className="flex flex-col sm:flex-row sm:justify-between">
+                    <span className="text-gray-600 mb-1 sm:mb-0">Contract Address:</span>
+                    <span className="font-medium text-sm break-all">D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump</span>
                   </li>
                 </ul>
               </div>
@@ -250,9 +292,9 @@ const TokenInfo = () => {
                 It's for vibes and valuations. Always do your own research before investing but we strongly suggest you to buy it.
               </p>
             </div>
-          </div>
           
-          <div>
+          
+            <div>
             <div className="mt-6 bg-white rounded-2xl p-6 shadow-elegant">
               <h3 className="text-xl font-semibold mb-4">What People Are Saying</h3>
               
@@ -272,6 +314,7 @@ const TokenInfo = () => {
                   <p className="text-sm text-gray-500 mt-1">@solana_gems</p>
                 </div>
               </div>
+            </div>
               
               <div className="mt-4 bg-pulse-50 p-4 rounded-lg">
                 <div className="flex items-center gap-2">

@@ -12,6 +12,7 @@ interface AMAEvent {
   coHost?: {name: string, handle: string};
   link: string;
   twitterLink: string;
+  bannerImage: string;
 }
 
 const AMASection: React.FC = () => {
@@ -30,7 +31,8 @@ const AMASection: React.FC = () => {
       ],
       host: {name: "Bhumi Mishra", handle: "@bhumi_125"},
       link: "https://x.com/i/spaces/1ZkKzYmqVANxv/peek",
-      twitterLink: "https://x.com/bharat_dao_/status/1941211138643181760"
+      twitterLink: "https://x.com/bharat_dao_/status/1941211138643181760",
+      bannerImage: "/lovable-uploads/22d31f51-c174-40a7-bd95-00e4ad00eaf3.png"
     },
     {
       title: "Bharat DAO Ambassador Program",
@@ -44,7 +46,24 @@ const AMASection: React.FC = () => {
       host: {name: "Bhumi Mishra", handle: "@bhumi_125"},
       coHost: {name: "Alok", handle: "@alok_inj"},
       link: "https://x.com/i/spaces/1DXxyqRAmMbxM",
-      twitterLink: "https://x.com/bharat_dao_/status/1942984759044640777"
+      twitterLink: "https://x.com/bharat_dao_/status/1942984759044640777",
+      bannerImage: "/lovable-uploads/5663820f-6c97-4492-9210-9eaa1a8dc415.png"
+    },
+    {
+      title: "TOO ICONIC TO IGNORE 🔥",
+      description: "Bharat DAO x Baddies Call. Not a panel. A power room. 5 women in Web3 sharing what it really takes - the wins, the mess, and everything in between.",
+      date: "17th July",
+      time: "10 PM IST",
+      speakers: [
+        {name: "Daavya Vaishnav", handle: "@Daavya_vaishnav"},
+        {name: "Medusa", handle: "@MedusaOnchain"},
+        {name: "Jaynti Kanani", handle: "@jdkanani"},
+      ],
+      host: {name: "Bhumi Mishra", handle: "@bhumi_125"},
+      coHost: {name: "XX", handle: "@XX"},
+      link: "https://x.com/i/spaces/1jMJgkLzWdgJL",
+      twitterLink: "https://x.com/bharat_dao_/status/1945497313599697138",
+      bannerImage: "/lovable-uploads/dc13e94f-beeb-4671-8a22-0968498cdb4c.png"
     }
   ];
 
@@ -68,74 +87,90 @@ const AMASection: React.FC = () => {
           Join our community discussions and stay updated with the latest developments in Bharat DAO. Our Twitter Spaces feature industry experts, community leaders, and team members sharing insights and answering your questions.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {amaEvents.map((event, index) => (
             <div 
               key={index} 
-              className="glass-card p-6 hover-lift animate-on-scroll"
+              className="glass-card overflow-hidden hover-lift animate-on-scroll flex flex-col"
             >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2 bg-pulse-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                  <Twitter size={14} />
-                  <span>TWITTER SPACE</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-500 text-sm">
-                  <Calendar size={14} className="text-pulse-500" />
-                  <span>{event.date}</span>
-                  <Clock size={14} className="text-pulse-500 ml-2" />
-                  <span>{event.time}</span>
-                </div>
+              {/* Banner Image */}
+              <div className="w-full h-48 overflow-hidden">
+                <img 
+                  src={event.bannerImage} 
+                  alt={`${event.title} banner`} 
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = "/placeholder.svg";
+                  }}
+                />
               </div>
               
-              <h3 className="text-2xl font-bold mb-2 text-gray-800">{event.title}</h3>
-              <p className="text-gray-600 mb-6">{event.description}</p>
-              
-              <div className="mb-6 bg-gradient-to-br from-gray-50 to-white p-4 rounded-lg border border-gray-100">
-                <h4 className="text-sm uppercase text-gray-500 mb-3 flex items-center">
-                  <span className="w-1.5 h-1.5 bg-pulse-500 rounded-full mr-2"></span>
-                  Speakers
-                </h4>
-                <ul className="space-y-2">
-                  {event.speakers.map((speaker, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <div className="w-6 h-6 rounded-full bg-pulse-100 flex items-center justify-center mr-3 text-xs font-medium text-pulse-600">
-                        {idx + 1}
-                      </div>
-                      <span className="text-gray-800 font-medium">{speaker.name}</span>
-                      <span className="text-pulse-500 ml-2 text-sm">{speaker.handle}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div className="mb-6">
-                <h4 className="text-sm uppercase text-gray-500 mb-3 flex items-center">
-                  <span className="w-1.5 h-1.5 bg-pulse-500 rounded-full mr-2"></span>
-                  Hosted by
-                </h4>
-                <div className="flex items-center bg-gray-50 p-3 rounded-lg">
-                  <div className="w-8 h-8 rounded-full bg-pulse-500 text-white flex items-center justify-center mr-3 text-xs font-medium">
-                    H
+              <div className="p-6 flex-grow">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2 bg-pulse-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                    <Twitter size={14} />
+                    <span>TWITTER SPACE</span>
                   </div>
-                  <div>
-                    <span className="text-gray-800 font-medium block">{event.host.name}</span>
-                    <span className="text-pulse-500 text-sm">{event.host.handle}</span>
+                  <div className="flex items-center gap-2 text-gray-500 text-sm">
+                    <Calendar size={14} className="text-pulse-500" />
+                    <span>{event.date}</span>
+                    <Clock size={14} className="text-pulse-500 ml-2" />
+                    <span>{event.time}</span>
                   </div>
                 </div>
-                {event.coHost && (
-                  <div className="flex items-center mt-3 bg-gray-50 p-3 rounded-lg">
-                    <div className="w-8 h-8 rounded-full bg-pulse-400 text-white flex items-center justify-center mr-3 text-xs font-medium">
-                      C
+                
+                <h3 className="text-2xl font-bold mb-2 text-gray-800">{event.title}</h3>
+                <p className="text-gray-600 mb-6">{event.description}</p>
+                
+                <div className="mb-6 bg-gradient-to-br from-gray-50 to-white p-4 rounded-lg border border-gray-100">
+                  <h4 className="text-sm uppercase text-gray-500 mb-3 flex items-center">
+                    <span className="w-1.5 h-1.5 bg-pulse-500 rounded-full mr-2"></span>
+                    Speakers
+                  </h4>
+                  <ul className="space-y-2">
+                    {event.speakers.map((speaker, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <div className="w-6 h-6 rounded-full bg-pulse-100 flex items-center justify-center mr-3 text-xs font-medium text-pulse-600">
+                          {idx + 1}
+                        </div>
+                        <span className="text-gray-800 font-medium">{speaker.name}</span>
+                        <span className="text-pulse-500 ml-2 text-sm">{speaker.handle}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="text-sm uppercase text-gray-500 mb-3 flex items-center">
+                    <span className="w-1.5 h-1.5 bg-pulse-500 rounded-full mr-2"></span>
+                    Hosted by
+                  </h4>
+                  <div className="flex items-center bg-gray-50 p-3 rounded-lg">
+                    <div className="w-8 h-8 rounded-full bg-pulse-500 text-white flex items-center justify-center mr-3 text-xs font-medium">
+                      H
                     </div>
                     <div>
-                      <span className="text-gray-800 font-medium block">{event.coHost.name}</span>
-                      <span className="text-pulse-500 text-sm">{event.coHost.handle}</span>
+                      <span className="text-gray-800 font-medium block">{event.host.name}</span>
+                      <span className="text-pulse-500 text-sm">{event.host.handle}</span>
                     </div>
                   </div>
-                )}
+                  {event.coHost && (
+                    <div className="flex items-center mt-3 bg-gray-50 p-3 rounded-lg">
+                      <div className="w-8 h-8 rounded-full bg-pulse-400 text-white flex items-center justify-center mr-3 text-xs font-medium">
+                        C
+                      </div>
+                      <div>
+                        <span className="text-gray-800 font-medium block">{event.coHost.name}</span>
+                        <span className="text-pulse-500 text-sm">{event.coHost.handle}</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-3 mt-8">
+              <div className="flex flex-col gap-3 p-6 pt-0 mt-auto">
                 <Button 
                   className="bg-pulse-600 hover:bg-pulse-700 text-white button-primary"
                   onClick={() => window.open(event.link, '_blank')}
