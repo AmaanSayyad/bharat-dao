@@ -1,41 +1,7 @@
 
-import React, { useState } from "react";
-import { toast } from "sonner";
+import React from "react";
+
 const DetailsSection = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    company: ""
-  });
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const {
-      name,
-      value
-    } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Simple validation
-    if (!formData.fullName || !formData.email) {
-      toast.error("Please fill in all required fields");
-      return;
-    }
-
-    // Demo form submission
-    toast.success("Request submitted successfully!");
-
-    // Reset form
-    setFormData({
-      fullName: "",
-      email: "",
-      company: ""
-    });
-  };
   return <section id="details" className="w-full bg-white py-0">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-2">
@@ -48,7 +14,7 @@ const DetailsSection = () => {
             backgroundPosition: "center"
           }}>
               <h2 className="text-2xl sm:text-3xl font-display text-white font-bold">
-                The details
+                $BDAO Tokenomics
               </h2>
             </div>
             
@@ -130,7 +96,7 @@ const DetailsSection = () => {
             </div>
           </div>
 
-          {/* Right Card - Contact Form */}
+          {/* Right Card - Contact Info */}
           <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-elegant">
             {/* Card Header with background image instead of gradient */}
             <div className="relative h-48 sm:h-64 p-6 sm:p-8 flex flex-col items-start" style={{
@@ -139,63 +105,66 @@ const DetailsSection = () => {
             backgroundPosition: "center"
           }}>
               <div className="inline-block px-4 sm:px-6 py-2 border border-white text-white rounded-full text-xs mb-4">
-                Request a demo
+                Connect with us
               </div>
               <h2 className="text-2xl sm:text-3xl font-display text-white font-bold mt-auto">
-                See it for yourself
+                Join our community
               </h2>
             </div>
             
-            {/* Card Content - Form */}
+            {/* Card Content - Social Links */}
             <div className="bg-white p-4 sm:p-8" style={{
             backgroundColor: "#FFFFFF",
             border: "1px solid #ECECEC"
           }}>
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-                <div>
-                  <input 
-                    type="text" 
-                    name="fullName" 
-                    value={formData.fullName} 
-                    onChange={handleChange} 
-                    placeholder="Full name" 
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pulse-500 focus:border-transparent" 
-                    required 
-                  />
-                </div>
-                
-                <div>
-                  <input 
-                    type="email" 
-                    name="email" 
-                    value={formData.email} 
-                    onChange={handleChange} 
-                    placeholder="Email address" 
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pulse-500 focus:border-transparent" 
-                    required 
-                  />
-                </div>
-                
-                <div>
-                  <input 
-                    type="text" 
-                    name="company" 
-                    value={formData.company} 
-                    onChange={handleChange} 
-                    placeholder="Company (optional)" 
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pulse-500 focus:border-transparent" 
-                  />
-                </div>
-                
-                <div>
-                  <button 
-                    type="submit" 
-                    className="w-full px-6 py-3 bg-pulse-500 hover:bg-pulse-600 text-white font-medium rounded-full transition-colors duration-300"
-                  >
-                    Request access
-                  </button>
-                </div>
-              </form>
+              <p className="text-lg text-gray-700 mb-8">
+                Follow us on social media to stay updated with the latest news, events, and opportunities from Bharat DAO.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <a 
+                  href="https://discord.gg/F3pHyeP3wq" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center p-4 rounded-lg border border-gray-200 hover:border-pulse-500 hover:bg-pulse-50 transition-all"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-3 text-pulse-600"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="21.17" x2="12" y1="8" y2="8"></line><line x1="3.95" x2="8.54" y1="6.06" y2="14"></line><line x1="10.88" x2="15.46" y1="21.94" y2="14"></line></svg>
+                  <span className="font-medium">Discord</span>
+                </a>
+                <a 
+                  href="https://x.com/bharat_dao_" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center p-4 rounded-lg border border-gray-200 hover:border-pulse-500 hover:bg-pulse-50 transition-all"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-3 text-pulse-600"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                  <span className="font-medium">Twitter</span>
+                </a>
+                <a 
+                  href="https://t.me/daobharat" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center p-4 rounded-lg border border-gray-200 hover:border-pulse-500 hover:bg-pulse-50 transition-all"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-3 text-pulse-600"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+                  <span className="font-medium">Telegram</span>
+                </a>
+                <a 
+                  href="https://chat.whatsapp.com/HLLdthucrWOAOq7ylUtkVJ" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center p-4 rounded-lg border border-gray-200 hover:border-pulse-500 hover:bg-pulse-50 transition-all"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-3 text-pulse-600"><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <span className="font-medium">WhatsApp</span>
+                </a>
+              </div>
+              
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <p className="text-sm text-gray-600">
+                  For business inquiries, please reach out to us on our social media channels.
+                </p>
+              </div>
             </div>
           </div>
         </div>

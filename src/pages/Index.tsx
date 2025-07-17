@@ -16,6 +16,8 @@ import AMASection from "@/components/AMASection";
 import TokenListings from "@/components/TokenListings";
 import Partners from "@/components/Partners";
 import PastEvents from "@/components/PastEvents";
+import StakingSection from "@/components/StakingSection";
+import RoadmapSection from "@/components/RoadmapSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -70,12 +72,12 @@ const Index = () => {
       <main className="space-y-4 sm:space-y-8"> {/* Reduced space on mobile */}
         <Hero />
         <HumanoidSection />
-        <SpecsSection />
-        <DetailsSection />
-        <ImageShowcaseSection />
+        <SpecsSection />        
         <Features />
         <TokenInfo />
         <TokenListings />
+        <StakingSection />
+        <RoadmapSection />
         <HiringSection />
         <AMASection />
         <Testimonials />
