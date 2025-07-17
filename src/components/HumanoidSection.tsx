@@ -105,113 +105,164 @@ const HumanoidSection = () => {
             </h2>
           </div>
           
-          <div ref={cardsContainerRef} className="relative flex-1 perspective-1000">
-            {/* First Card */}
-            <div 
-              className={`absolute inset-0 overflow-hidden shadow-xl ${isFirstCardVisible ? 'animate-card-enter' : ''}`} 
-              style={{
-                ...cardStyle,
+          <div
+            ref={cardsContainerRef}
+            className="relative flex-1 perspective-1000"
+          >
+            {/* Card Data */}
+            {[
+              {
+                key: "vision",
+                visible: isFirstCardVisible,
                 zIndex: 10,
-                transform: `translateY(${isFirstCardVisible ? '90px' : '200px'}) scale(0.9)`,
-                opacity: isFirstCardVisible ? 0.9 : 0
-              }}
-            >
-              <div
-                className="absolute inset-0 z-0 bg-gradient-to-b from-pulse-900/40 to-dark-900/80"
-                style={{
-                  backgroundImage: "url('/background-section1.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "top center",
-                  backgroundBlendMode: "overlay"
-                }}
-              ></div>
-              
-              <div className="absolute top-4 right-4 z-20">
-                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">The vision</span>
-                </div>
-              </div>
-              
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
-                <div className="max-w-lg">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    We're building a gateway for global blockchains to enter India
-                  </h3>
-                </div>
-              </div>
-            </div>
-            
-            {/* Second Card */}
-            <div 
-              className={`absolute inset-0 overflow-hidden shadow-xl ${isSecondCardVisible ? 'animate-card-enter' : ''}`} 
-              style={{
-                ...cardStyle,
+                translateY: isFirstCardVisible ? "70px" : "200px",
+                scale: 0.93,
+                opacity: isFirstCardVisible ? 1 : 0,
+                bg: "/background-section1.png",
+                bgPos: "top center",
+                label: "The Vision",
+                labelIcon: (
+                  <svg className="w-4 h-4 mr-2 text-pulse-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8v4l3 3" />
+                  </svg>
+                ),
+                heading: (
+                  <>
+                    We're building a <span className="text-pulse-400">gateway</span> for global blockchains to enter India
+                  </>
+                ),
+                headingClass: "text-white"
+              },
+              {
+                key: "mission",
+                visible: isSecondCardVisible,
                 zIndex: 20,
-                transform: `translateY(${isSecondCardVisible ? activeCardIndex === 1 ? '55px' : '45px' : '200px'}) scale(0.95)`,
+                translateY: isSecondCardVisible
+                  ? activeCardIndex === 1
+                    ? "35px"
+                    : "25px"
+                  : "200px",
+                scale: 0.97,
                 opacity: isSecondCardVisible ? 1 : 0,
-                pointerEvents: isSecondCardVisible ? 'auto' : 'none'
-              }}
-            >
-              <div
-                className="absolute inset-0 z-0 bg-gradient-to-b from-pulse-900/40 to-dark-900/80"
-                style={{
-                  backgroundImage: "url('/background-section2.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundBlendMode: "overlay"
-                }}
-              ></div>
-              
-              <div className="absolute top-4 right-4 z-20">
-                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">The vision</span>
-                </div>
-              </div>
-              
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
-                <div className="max-w-lg">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    We're empowering Indian talent to access global opportunities
-                  </h3>
-                </div>
-              </div>
-            </div>
-            
-            {/* Third Card */}
-            <div 
-              className={`absolute inset-0 overflow-hidden shadow-xl ${isThirdCardVisible ? 'animate-card-enter' : ''}`} 
-              style={{
-                ...cardStyle,
+                bg: "/background-section2.png",
+                bgPos: "center",
+                label: "The Mission",
+                labelIcon: (
+                  <svg className="w-4 h-4 mr-2 text-pulse-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M12 19V5" />
+                    <path d="M5 12l7-7 7 7" />
+                  </svg>
+                ),
+                heading: (
+                  <>
+                    We're <span className="text-pulse-400">empowering</span> Indian talent to access global opportunities
+                  </>
+                ),
+                headingClass: "text-white"
+              },
+              {
+                key: "values",
+                visible: isThirdCardVisible,
                 zIndex: 30,
-                transform: `translateY(${isThirdCardVisible ? activeCardIndex === 2 ? '15px' : '0' : '200px'}) scale(1)`,
+                translateY: isThirdCardVisible
+                  ? activeCardIndex === 2
+                    ? "0"
+                    : "-10px"
+                  : "200px",
+                scale: 1,
                 opacity: isThirdCardVisible ? 1 : 0,
-                pointerEvents: isThirdCardVisible ? 'auto' : 'none'
-              }}
-            >
-              <div
-                className="absolute inset-0 z-0 bg-gradient-to-b from-pulse-900/40 to-dark-900/80"
-                style={{
-                  backgroundImage: "url('/background-section3.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "bottom center",
-                  backgroundBlendMode: "overlay"
-                }}
-              ></div>
-              
-              <div className="absolute top-4 right-4 z-20">
-                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">The vision</span>
+                bg: "/background-section3.png",
+                bgPos: "bottom center",
+                label: "The Values",
+                labelIcon: (
+                  <svg className="w-4 h-4 mr-2 text-pulse-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M12 20l9-5-9-5-9 5 9 5z" />
+                    <path d="M12 12V4" />
+                  </svg>
+                ),
+                heading: (
+                  <>
+                    We're creating a <span className="text-[#FC4D0A]">community</span>, <span className="text-pulse-400">not just a platform</span>
+                  </>
+                ),
+                headingClass: "text-white"
+              }
+            ].map(
+              (
+                {
+                  key,
+                  visible,
+                  zIndex,
+                  translateY,
+                  scale,
+                  opacity,
+                  bg,
+                  bgPos,
+                  label,
+                  labelIcon,
+                  heading,
+                  headingClass
+                },
+                idx
+              ) => (
+                <div
+                  key={key}
+                  className={`absolute inset-0 overflow-hidden rounded-3xl shadow-2xl transition-all duration-500 ease-[cubic-bezier(.77,0,.18,1)] ${
+                    visible ? "animate-card-enter" : ""
+                  }`}
+                  style={{
+                    ...cardStyle,
+                    zIndex,
+                    transform: `translateY(${translateY}) scale(${scale})`,
+                    opacity,
+                    pointerEvents: visible ? "auto" : "none",
+                    boxShadow:
+                      visible && idx === 2
+                        ? "0 12px 48px 0 rgba(252,77,10,0.18), 0 2px 8px 0 rgba(0,0,0,0.10)"
+                        : "0 6px 32px 0 rgba(0,0,0,0.10)"
+                  }}
+                >
+                  {/* Card Background */}
+                  <div
+                    className="absolute inset-0 z-0 bg-gradient-to-b from-pulse-900/40 to-dark-900/80"
+                    style={{
+                      backgroundImage: `url('${bg}')`,
+                      backgroundSize: "cover",
+                      backgroundPosition: bgPos,
+                      backgroundBlendMode: "overlay",
+                      borderRadius: "inherit"
+                    }}
+                  ></div>
+
+                  {/* Card Label */}
+                  <div className="absolute top-5 left-5 z-20">
+                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-md text-white font-semibold shadow-md">
+                      {labelIcon}
+                      <span className="text-sm font-medium tracking-wide">{label}</span>
+                    </div>
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="relative z-10 p-6 sm:p-8 md:p-10 h-full flex items-center">
+                    <div className="max-w-lg">
+                      <h3
+                        className={`text-2xl sm:text-3xl md:text-4xl font-display font-bold leading-tight mb-4 drop-shadow-lg ${headingClass}`}
+                      >
+                        {heading}
+                      </h3>
+                      {idx === 2 && (
+                        <p className="text-lg text-white/80 font-medium">
+                          Our values: <span className="font-semibold text-pulse-400">Openness</span>,{" "}
+                          <span className="font-semibold text-pulse-400">Collaboration</span>,{" "}
+                          <span className="font-semibold text-pulse-400">Empowerment</span>
+                        </p>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
-                <div className="max-w-lg">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    We're creating a community, <span className="text-[#FC4D0A]">not just a platform</span>
-                  </h3>
-                </div>
-              </div>
-            </div>
+              )
+            )}
           </div>
         </div>
       </section>

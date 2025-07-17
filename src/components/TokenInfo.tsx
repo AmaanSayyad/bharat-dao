@@ -172,6 +172,30 @@ const TokenInfo = () => {
                 </ul>
               </div>
               
+              {/* Litepaper Download Section */}
+              <div className="bg-gradient-to-r from-pulse-50 to-white p-6 rounded-xl shadow-sm border border-pulse-100">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-semibold text-gray-800">Bharat DAO Litepaper</h3>
+                  <span className="bg-pulse-100 text-pulse-700 text-xs font-medium px-2.5 py-1 rounded">DOCS</span>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Learn more about our vision, tokenomics, and roadmap in our official litepaper.
+                </p>
+                <a 
+                  href="https://docs.google.com/document/d/1KYFU6vpxaOfv-XEzedd5ePPmGhnxnA1wHjezJ5EE5fk/edit?usp=sharing" 
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  className="flex items-center justify-center gap-2 bg-pulse-600 hover:bg-pulse-700 text-white py-3 px-4 rounded-lg transition-colors w-full sm:w-auto"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  View Litepaper
+                </a>
+              </div>
+              
               <div className="bg-white p-6 rounded-xl shadow-sm">
                 <h3 className="text-xl font-semibold mb-2">Token Utility</h3>
                 <ul className="space-y-2">

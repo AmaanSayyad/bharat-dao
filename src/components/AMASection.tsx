@@ -20,14 +20,14 @@ const AMASection: React.FC = () => {
   
   const amaEvents: AMAEvent[] = [
     {
-      title: "Memes, Mistakes & Making it in Web3",
+      title: "Memes, Mistakes & Making it in Web3 🎯",
       description: "Unfiltered. Unhinged. Unmissable.",
       date: "6th July",
       time: "10 PM IST",
       speakers: [
-        {name: "Tony", handle: "@TonyCatoff"},
+        {name: "Tony Klor", handle: "@TonyCatoff"},
         {name: "Fardeen Khan", handle: "@thelastknown_"},
-        {name: "Trivikram", handle: "@trivikram214"},
+        {name: "Trivikram Tiwari", handle: "@trivikram214"},
       ],
       host: {name: "Bhumi Mishra", handle: "@bhumi_125"},
       link: "https://x.com/i/spaces/1ZkKzYmqVANxv/peek",
@@ -35,14 +35,14 @@ const AMASection: React.FC = () => {
       bannerImage: "/AMA1.jpeg"
     },
     {
-      title: "Bharat DAO Ambassador Program",
+      title: "Bharat DAO Ambassador Program 💸",
       description: "$10,000 reward pool - Questions? Doubts? Curious if it's real or just hype? This is your moment to get all the answers- unfiltered, honest, and straight from the team.",
       date: "9th July",
       time: "10 PM IST",
       speakers: [
+        {name: "Alok Pandey", handle: "@alok_inj"},
         {name: "Shagun Oberoi", handle: "@shagunoberoi_"},
         {name: "Shivangi Singh", handle: "@kaafi_shivangi"},
-        {name: "Alok", handle: "@alok_inj"},
       ],
       host: {name: "Bhumi Mishra", handle: "@bhumi_125"},
       link: "https://x.com/i/spaces/1DXxyqRAmMbxM",
@@ -50,7 +50,7 @@ const AMASection: React.FC = () => {
       bannerImage: "/AMA2.jpeg"
     },
     {
-      title: "TOO ICONIC TO IGNORE 🔥",
+      title: "Too Iconic to Ignore 🔥",
       description: "Bharat DAO x Baddies Call. Not a panel. A power room. 5 women in Web3 sharing what it really takes - the wins, the mess, and everything in between.",
       date: "17th July",
       time: "10 PM IST",
@@ -146,7 +146,14 @@ const AMASection: React.FC = () => {
                           {idx + 1}
                         </div>
                         <span className="text-gray-800 font-medium">{speaker.name}</span>
-                        <span className="text-pulse-500 ml-2 text-sm">{speaker.handle}</span>
+                        <a 
+                          href={`https://x.com/${speaker.handle.replace('@', '')}`} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-pulse-500 ml-2 text-sm hover:text-pulse-700 transition-colors"
+                        >
+                          {speaker.handle}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -163,7 +170,14 @@ const AMASection: React.FC = () => {
                     </div>
                     <div>
                       <span className="text-gray-800 font-medium block">{event.host.name}</span>
-                      <span className="text-pulse-500 text-sm">{event.host.handle}</span>
+                      <a 
+                        href={`https://x.com/${event.host.handle.replace('@', '')}`} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-pulse-500 text-sm hover:text-pulse-700 transition-colors"
+                      >
+                        {event.host.handle}
+                      </a>
                     </div>
                   </div>
                   {event.coHost && (
@@ -173,7 +187,14 @@ const AMASection: React.FC = () => {
                       </div>
                       <div>
                         <span className="text-gray-800 font-medium block">{event.coHost.name}</span>
-                        <span className="text-pulse-500 text-sm">{event.coHost.handle}</span>
+                        <a 
+                          href={`https://x.com/${event.coHost.handle.replace('@', '')}`} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-pulse-500 text-sm hover:text-pulse-700 transition-colors"
+                        >
+                          {event.coHost.handle}
+                        </a>
                       </div>
                     </div>
                   )}

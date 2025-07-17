@@ -14,6 +14,8 @@ import HiringSection from "@/components/HiringSection";
 import TokenInfo from "@/components/TokenInfo";
 import AMASection from "@/components/AMASection";
 import TokenListings from "@/components/TokenListings";
+import Partners from "@/components/Partners";
+import PastEvents from "@/components/PastEvents";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -77,6 +79,8 @@ const Index = () => {
         <HiringSection />
         <AMASection />
         <Testimonials />
+        <Partners />
+        <PastEvents />
         <Newsletter />
         <MadeByHumans />
       </main>

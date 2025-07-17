@@ -114,7 +114,7 @@ const Hero = () => {
               className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" 
               style={{ animationDelay: "0.3s" }}
             >
-              Bharat Dao: Building<br className="hidden sm:inline" />India's <span className="text-pulse-500">10,000x</span> Future
+              Bharat Dao: Building<br className="hidden sm:inline" /> India's <span className="text-pulse-500">10,000x</span> Future
             </h1>
             
             <p 
@@ -129,7 +129,7 @@ const Hero = () => {
               style={{ animationDelay: "0.7s" }}
             >
               <a 
-                href="https://pump.fun/advanced/coin/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump" 
+                href="#token" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center group w-full sm:w-auto text-center" 
@@ -150,10 +150,12 @@ const Hero = () => {
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
               <a 
-                href="#token" 
+                href="https://docs.google.com/document/d/1V_QKp_fIBXq1ZUlzRRT_JeUtIjUt05g3fBHjZKgFsxo/edit?usp=sharing" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center w-full sm:w-auto text-center border border-gray-300 hover:border-pulse-500 text-gray-800 hover:text-pulse-500 font-medium py-3 px-6 rounded-full transition-all duration-300"
               >
-                View Token Metrics
+                View Litepaper
               </a>
             </div>
           </div>
