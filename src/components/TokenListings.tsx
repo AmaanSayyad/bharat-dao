@@ -41,6 +41,24 @@ const TokenListings: React.FC = () => {
       isLive: true
     },
     {
+      name: "GeckoTerminal",
+      logo: "/geckoterminal-logo.png",
+      url: "https://www.geckoterminal.com/solana/pools/AFViYUmWmhvhvmhirq3Bzvi2MSCTEHLGLSi5VSutRq5a",
+      isLive: true
+    },
+    {
+      name: "Photon",
+      logo: "/photon-logo.png",
+      url: "https://photon-sol.tinyastro.io/en/lp/AFViYUmWmhvhvmhirq3Bzvi2MSCTEHLGLSi5VSutRq5a",
+      isLive: true
+    },
+    {
+      name: "GMGN",
+      logo: "/gmgn-logo.png",
+      url: "https://gmgn.ai/sol/token/solscan_D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump",
+      isLive: true
+    },
+    {
       name: "CoinGecko",
       logo: "/coingecko-logo.png",
       url: "https://www.coingecko.com/en/coins/bharat-dao"
