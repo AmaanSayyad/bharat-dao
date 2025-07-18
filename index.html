@@ -7,6 +7,19 @@
     <title>Bharat Dao ($BDAO)</title>
     <meta name="description" content="" />
     <meta name="author" content="Rezaul Karim Arif" />
+    <script>
+      // Ensure body overflow is reset on page load and periodically check
+      window.addEventListener('DOMContentLoaded', function() {
+        document.body.style.removeProperty('overflow');
+        
+        // Check every second if body has overflow: hidden and remove it if needed
+        setInterval(function() {
+          if (document.body.style.overflow === 'hidden') {
+            document.body.style.removeProperty('overflow');
+          }
+        }, 1000);
+      });
+    </script>
   </head>
 
   <body>
