@@ -100,6 +100,48 @@ const TokenInfo = () => {
                     </div>
                   </div>
                 </a>
+                <a 
+                  href="https://www.geckoterminal.com/solana/pools/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/20 backdrop-blur-sm rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-colors group"
+                >
+                  <div className="text-center">
+                    <div className="text-lg font-bold mb-1">GeckoTerminal</div>
+                    <div className="text-xs flex items-center justify-center">
+                      View Chart
+                      <ExternalLink className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </div>
+                  </div>
+                </a>
+                <a 
+                  href="https://photon-sol.tinyastro.io/en/lp/AFViYUmWmhvhvmhirq3Bzvi2MSCTEHLGLSi5VSutRq5a" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/20 backdrop-blur-sm rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-colors group"
+                >
+                  <div className="text-center">
+                    <div className="text-lg font-bold mb-1">Photon</div>
+                    <div className="text-xs flex items-center justify-center">
+                      Trade Now
+                      <ExternalLink className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </div>
+                  </div>
+                </a>
+                <a 
+                  href="https://gmgn.ai/sol/token/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/20 backdrop-blur-sm rounded-lg p-3 flex items-center justify-center hover:bg-white/30 transition-colors group"
+                >
+                  <div className="text-center">
+                    <div className="text-lg font-bold mb-1">GMGN</div>
+                    <div className="text-xs flex items-center justify-center">
+                      View Token
+                      <ExternalLink className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
             
