@@ -278,7 +278,7 @@ const TokenInfo = () => {
             </div>
             
             <a 
-              href="https://pump.fun/advanced/coin/D9achTmEniiy8SXFzo1UmhJxL74uuCckZTMVnxsupump" 
+              href="#token" 
               target="_blank" 
               rel="noopener noreferrer"
               className="button-primary group flex items-center justify-center w-full sm:w-auto text-center text-lg font-bold py-5"
